@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF2AB2BC17286AAC00840ED0 /* LTCoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2AB2BB17286AAC00840ED0 /* LTCoreViewController.m */; };
+		EF33D99017455E6000891596 /* EventDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF33D98E17455E6000891596 /* EventDataController.m */; };
+		EF33D9931745604800891596 /* SubEvent+create.m in Sources */ = {isa = PBXBuildFile; fileRef = EF33D9921745604800891596 /* SubEvent+create.m */; };
+		EF33D9951745628400891596 /* temple.gif in Resources */ = {isa = PBXBuildFile; fileRef = EF33D9941745628400891596 /* temple.gif */; };
+		EF33D9981751849700891596 /* UILoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF33D9971751849700891596 /* UILoadingView.m */; };
+		EF33D99E17527E0300891596 /* LTEventScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF33D99D17527E0300891596 /* LTEventScheduleViewController.m */; };
+		EF6BFC2F174429BF001C9A49 /* TempleDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6BFC2D174429BF001C9A49 /* TempleDataController.m */; };
+		EF6BFC321744A4CE001C9A49 /* ThithiAndDay.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6BFC311744A4CE001C9A49 /* ThithiAndDay.m */; };
+		EF6CF82D1728631F0015EC70 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6CF82C1728631F0015EC70 /* CoreDataTableViewController.m */; };
+		EFB0D4B21729CA2A003F3FFB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFB0D4B11729CA2A003F3FFB /* CoreData.framework */; };
+		EFB0D4B51729CAB7003F3FFB /* LivermoreTemple.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EFB0D4B31729CAB7003F3FFB /* LivermoreTemple.xcdatamodeld */; };
+		EFB0D50A172EF901003F3FFB /* Temple+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB0D509172EF901003F3FFB /* Temple+Create.m */; };
+		EFB0D519172F95CA003F3FFB /* LTDatabaseDocumentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB0D518172F95CA003F3FFB /* LTDatabaseDocumentHandler.m */; };
+		EFB0D52817304582003F3FFB /* Event+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB0D52717304581003F3FFB /* Event+Create.m */; };
+		EFB0D54317306DC0003F3FFB /* LTCalendarCDTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB0D54217306DC0003F3FFB /* LTCalendarCDTVC.m */; };
 		EFC0133E1725D3F300550F42 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC0133D1725D3F300550F42 /* UIKit.framework */; };
 		EFC013401725D3F300550F42 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC0133F1725D3F300550F42 /* Foundation.framework */; };
 		EFC013421725D3F300550F42 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC013411725D3F300550F42 /* CoreGraphics.framework */; };
@@ -18,10 +33,45 @@
 		EFC013541725D3F300550F42 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFC013531725D3F300550F42 /* Default-568h@2x.png */; };
 		EFC013571725D3F300550F42 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFC013551725D3F300550F42 /* MainStoryboard_iPhone.storyboard */; };
 		EFC0135A1725D3F300550F42 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFC013581725D3F300550F42 /* MainStoryboard_iPad.storyboard */; };
-		EFC0135D1725D3F300550F42 /* LTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC0135C1725D3F300550F42 /* LTViewController.m */; };
+		EFC1F3091732F11900735C8D /* LTEventViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC1F3081732F11900735C8D /* LTEventViewCell.m */; };
+		EFED34111741719E00F38895 /* Temple.m in Sources */ = {isa = PBXBuildFile; fileRef = EFED34101741719E00F38895 /* Temple.m */; };
+		EFED34171741719E00F38895 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = EFED34161741719E00F38895 /* Contact.m */; };
+		EFED34411742990100F38895 /* LTEventCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFED34401742990100F38895 /* LTEventCalendarViewController.m */; };
+		EFED34621743505F00F38895 /* ContactResponsibility.m in Sources */ = {isa = PBXBuildFile; fileRef = EFED34611743505F00F38895 /* ContactResponsibility.m */; };
+		EFED34651743513100F38895 /* DateCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = EFED34631743513100F38895 /* DateCalculator.m */; };
+		EFED346F174353E700F38895 /* Pooja.m in Sources */ = {isa = PBXBuildFile; fileRef = EFED346E174353E700F38895 /* Pooja.m */; };
+		EFED347E174358CF00F38895 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = EFED347D174358CF00F38895 /* Event.m */; };
+		EFED3481174358E400F38895 /* SubEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = EFED3480174358E400F38895 /* SubEvent.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF2AB2BA17286AAC00840ED0 /* LTCoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LTCoreViewController.h; path = ../iphone/LTCoreViewController.h; sourceTree = "<group>"; };
+		EF2AB2BB17286AAC00840ED0 /* LTCoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LTCoreViewController.m; path = ../iphone/LTCoreViewController.m; sourceTree = "<group>"; };
+		EF33D98E17455E6000891596 /* EventDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDataController.m; sourceTree = "<group>"; };
+		EF33D98F17455E6000891596 /* EventDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDataController.h; sourceTree = "<group>"; };
+		EF33D9911745604800891596 /* SubEvent+create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SubEvent+create.h"; sourceTree = "<group>"; };
+		EF33D9921745604800891596 /* SubEvent+create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SubEvent+create.m"; sourceTree = "<group>"; };
+		EF33D9941745628400891596 /* temple.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = temple.gif; sourceTree = "<group>"; };
+		EF33D9961751849700891596 /* UILoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILoadingView.h; sourceTree = "<group>"; };
+		EF33D9971751849700891596 /* UILoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UILoadingView.m; sourceTree = "<group>"; };
+		EF33D99C17527E0200891596 /* LTEventScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTEventScheduleViewController.h; sourceTree = "<group>"; };
+		EF33D99D17527E0300891596 /* LTEventScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTEventScheduleViewController.m; sourceTree = "<group>"; };
+		EF6BFC2D174429BF001C9A49 /* TempleDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TempleDataController.m; sourceTree = "<group>"; };
+		EF6BFC2E174429BF001C9A49 /* TempleDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TempleDataController.h; sourceTree = "<group>"; };
+		EF6BFC301744A4CE001C9A49 /* ThithiAndDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThithiAndDay.h; sourceTree = "<group>"; };
+		EF6BFC311744A4CE001C9A49 /* ThithiAndDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThithiAndDay.m; sourceTree = "<group>"; };
+		EF6CF82B1728631F0015EC70 /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataTableViewController.h; path = ../CoreDataTableViewController.h; sourceTree = "<group>"; };
+		EF6CF82C1728631F0015EC70 /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataTableViewController.m; path = ../CoreDataTableViewController.m; sourceTree = "<group>"; };
+		EFB0D4B11729CA2A003F3FFB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		EFB0D4B41729CAB7003F3FFB /* LivermoreTemple.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LivermoreTemple.xcdatamodel; sourceTree = "<group>"; };
+		EFB0D508172EF901003F3FFB /* Temple+Create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Temple+Create.h"; sourceTree = "<group>"; };
+		EFB0D509172EF901003F3FFB /* Temple+Create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Temple+Create.m"; sourceTree = "<group>"; };
+		EFB0D517172F95CA003F3FFB /* LTDatabaseDocumentHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LTDatabaseDocumentHandler.h; path = "../model-objects/LTDatabaseDocumentHandler.h"; sourceTree = "<group>"; };
+		EFB0D518172F95CA003F3FFB /* LTDatabaseDocumentHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LTDatabaseDocumentHandler.m; path = "../model-objects/LTDatabaseDocumentHandler.m"; sourceTree = "<group>"; };
+		EFB0D52617304581003F3FFB /* Event+Create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Event+Create.h"; sourceTree = "<group>"; };
+		EFB0D52717304581003F3FFB /* Event+Create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Event+Create.m"; sourceTree = "<group>"; };
+		EFB0D54117306DC0003F3FFB /* LTCalendarCDTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTCalendarCDTVC.h; sourceTree = "<group>"; };
+		EFB0D54217306DC0003F3FFB /* LTCalendarCDTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTCalendarCDTVC.m; sourceTree = "<group>"; };
 		EFC0133A1725D3F300550F42 /* LivermoreTemple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LivermoreTemple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFC0133D1725D3F300550F42 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EFC0133F1725D3F300550F42 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -37,8 +87,25 @@
 		EFC013531725D3F300550F42 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		EFC013561725D3F300550F42 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		EFC013591725D3F300550F42 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		EFC0135B1725D3F300550F42 /* LTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTViewController.h; sourceTree = "<group>"; };
-		EFC0135C1725D3F300550F42 /* LTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTViewController.m; sourceTree = "<group>"; };
+		EFC1F3071732F11900735C8D /* LTEventViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTEventViewCell.h; sourceTree = "<group>"; };
+		EFC1F3081732F11900735C8D /* LTEventViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTEventViewCell.m; sourceTree = "<group>"; };
+		EFED340F1741719E00F38895 /* Temple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Temple.h; sourceTree = "<group>"; };
+		EFED34101741719E00F38895 /* Temple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Temple.m; sourceTree = "<group>"; };
+		EFED34151741719E00F38895 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
+		EFED34161741719E00F38895 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
+		EFED343F1742990000F38895 /* LTEventCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTEventCalendarViewController.h; sourceTree = "<group>"; };
+		EFED34401742990100F38895 /* LTEventCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTEventCalendarViewController.m; sourceTree = "<group>"; };
+		EFED34601743505F00F38895 /* ContactResponsibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactResponsibility.h; sourceTree = "<group>"; };
+		EFED34611743505F00F38895 /* ContactResponsibility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactResponsibility.m; sourceTree = "<group>"; };
+		EFED34631743513100F38895 /* DateCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateCalculator.m; path = "../view-controllers/DateCalculator.m"; sourceTree = "<group>"; };
+		EFED34641743513100F38895 /* DateCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateCalculator.h; path = "../view-controllers/DateCalculator.h"; sourceTree = "<group>"; };
+		EFED34661743517F00F38895 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Header.h; path = ../Header.h; sourceTree = "<group>"; };
+		EFED346D174353E700F38895 /* Pooja.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pooja.h; sourceTree = "<group>"; };
+		EFED346E174353E700F38895 /* Pooja.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pooja.m; sourceTree = "<group>"; };
+		EFED347C174358CF00F38895 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		EFED347D174358CF00F38895 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		EFED347F174358E400F38895 /* SubEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubEvent.h; sourceTree = "<group>"; };
+		EFED3480174358E400F38895 /* SubEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubEvent.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFB0D4B21729CA2A003F3FFB /* CoreData.framework in Frameworks */,
 				EFC0133E1725D3F300550F42 /* UIKit.framework in Frameworks */,
 				EFC013401725D3F300550F42 /* Foundation.framework in Frameworks */,
 				EFC013421725D3F300550F42 /* CoreGraphics.framework in Frameworks */,
@@ -55,9 +123,155 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF2AB2B11728659500840ED0 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				EF6CF82B1728631F0015EC70 /* CoreDataTableViewController.h */,
+				EF6CF82C1728631F0015EC70 /* CoreDataTableViewController.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		EF2AB2B2172865B000840ED0 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				EF2AB2B3172865B000840ED0 /* images */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		EF2AB2B3172865B000840ED0 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				EF33D9941745628400891596 /* temple.gif */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		EF2AB2B4172865CE00840ED0 /* user-interface */ = {
+			isa = PBXGroup;
+			children = (
+				EF6BFC2B174428F7001C9A49 /* data-controllers */,
+				EF6BFC2C174428F7001C9A49 /* helper-classes */,
+				EFB0D507172EF857003F3FFB /* Categories */,
+				EF2AB2B61728666100840ED0 /* model-objects */,
+				EF2AB2B71728666100840ED0 /* view-controllers */,
+				EF2AB2B51728666100840ED0 /* custom-views */,
+			);
+			path = "user-interface";
+			sourceTree = "<group>";
+		};
+		EF2AB2B51728666100840ED0 /* custom-views */ = {
+			isa = PBXGroup;
+			children = (
+				EFC1F3071732F11900735C8D /* LTEventViewCell.h */,
+				EFC1F3081732F11900735C8D /* LTEventViewCell.m */,
+				EF33D9961751849700891596 /* UILoadingView.h */,
+				EF33D9971751849700891596 /* UILoadingView.m */,
+			);
+			path = "custom-views";
+			sourceTree = "<group>";
+		};
+		EF2AB2B61728666100840ED0 /* model-objects */ = {
+			isa = PBXGroup;
+			children = (
+				EF6BFC301744A4CE001C9A49 /* ThithiAndDay.h */,
+				EF6BFC311744A4CE001C9A49 /* ThithiAndDay.m */,
+				EFED347F174358E400F38895 /* SubEvent.h */,
+				EFED3480174358E400F38895 /* SubEvent.m */,
+				EFED347C174358CF00F38895 /* Event.h */,
+				EFED347D174358CF00F38895 /* Event.m */,
+				EFED346D174353E700F38895 /* Pooja.h */,
+				EFED346E174353E700F38895 /* Pooja.m */,
+				EFED34151741719E00F38895 /* Contact.h */,
+				EFED34161741719E00F38895 /* Contact.m */,
+				EFED340F1741719E00F38895 /* Temple.h */,
+				EFED34101741719E00F38895 /* Temple.m */,
+				EFED34601743505F00F38895 /* ContactResponsibility.h */,
+				EFED34611743505F00F38895 /* ContactResponsibility.m */,
+			);
+			path = "model-objects";
+			sourceTree = "<group>";
+		};
+		EF2AB2B71728666100840ED0 /* view-controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EF6BFC2A17441DE8001C9A49 /* core-view-controllers */,
+				EFED343F1742990000F38895 /* LTEventCalendarViewController.h */,
+				EFED34401742990100F38895 /* LTEventCalendarViewController.m */,
+				EF33D99C17527E0200891596 /* LTEventScheduleViewController.h */,
+				EF33D99D17527E0300891596 /* LTEventScheduleViewController.m */,
+				EF2AB2B817286A8C00840ED0 /* ipad */,
+				EF2AB2B917286A8C00840ED0 /* iphone */,
+			);
+			path = "view-controllers";
+			sourceTree = "<group>";
+		};
+		EF2AB2B817286A8C00840ED0 /* ipad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ipad;
+			sourceTree = "<group>";
+		};
+		EF2AB2B917286A8C00840ED0 /* iphone */ = {
+			isa = PBXGroup;
+			children = (
+				EFB0D54117306DC0003F3FFB /* LTCalendarCDTVC.h */,
+				EFB0D54217306DC0003F3FFB /* LTCalendarCDTVC.m */,
+			);
+			path = iphone;
+			sourceTree = "<group>";
+		};
+		EF6BFC2A17441DE8001C9A49 /* core-view-controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EF2AB2BA17286AAC00840ED0 /* LTCoreViewController.h */,
+				EF2AB2BB17286AAC00840ED0 /* LTCoreViewController.m */,
+			);
+			path = "core-view-controllers";
+			sourceTree = "<group>";
+		};
+		EF6BFC2B174428F7001C9A49 /* data-controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EF33D98F17455E6000891596 /* EventDataController.h */,
+				EF33D98E17455E6000891596 /* EventDataController.m */,
+				EF6BFC2E174429BF001C9A49 /* TempleDataController.h */,
+				EF6BFC2D174429BF001C9A49 /* TempleDataController.m */,
+				EFB0D517172F95CA003F3FFB /* LTDatabaseDocumentHandler.h */,
+				EFB0D518172F95CA003F3FFB /* LTDatabaseDocumentHandler.m */,
+			);
+			path = "data-controllers";
+			sourceTree = "<group>";
+		};
+		EF6BFC2C174428F7001C9A49 /* helper-classes */ = {
+			isa = PBXGroup;
+			children = (
+				EFED34641743513100F38895 /* DateCalculator.h */,
+				EFED34631743513100F38895 /* DateCalculator.m */,
+			);
+			path = "helper-classes";
+			sourceTree = "<group>";
+		};
+		EFB0D507172EF857003F3FFB /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				EFB0D508172EF901003F3FFB /* Temple+Create.h */,
+				EFB0D509172EF901003F3FFB /* Temple+Create.m */,
+				EFB0D52617304581003F3FFB /* Event+Create.h */,
+				EFB0D52717304581003F3FFB /* Event+Create.m */,
+				EF33D9911745604800891596 /* SubEvent+create.h */,
+				EF33D9921745604800891596 /* SubEvent+create.m */,
+			);
+			name = Categories;
+			path = "model-objects/Categories";
+			sourceTree = "<group>";
+		};
 		EFC013311725D3F300550F42 = {
 			isa = PBXGroup;
 			children = (
+				EFB0D4B11729CA2A003F3FFB /* CoreData.framework */,
 				EFC013431725D3F300550F42 /* LivermoreTemple */,
 				EFC0133C1725D3F300550F42 /* Frameworks */,
 				EFC0133B1725D3F300550F42 /* Products */,
@@ -89,8 +303,10 @@
 				EFC0134D1725D3F300550F42 /* LTAppDelegate.m */,
 				EFC013551725D3F300550F42 /* MainStoryboard_iPhone.storyboard */,
 				EFC013581725D3F300550F42 /* MainStoryboard_iPad.storyboard */,
-				EFC0135B1725D3F300550F42 /* LTViewController.h */,
-				EFC0135C1725D3F300550F42 /* LTViewController.m */,
+				EFB0D4B31729CAB7003F3FFB /* LivermoreTemple.xcdatamodeld */,
+				EF2AB2B4172865CE00840ED0 /* user-interface */,
+				EF2AB2B2172865B000840ED0 /* resources */,
+				EF2AB2B11728659500840ED0 /* Other */,
 				EFC013441725D3F300550F42 /* Supporting Files */,
 			);
 			path = LivermoreTemple;
@@ -99,6 +315,7 @@
 		EFC013441725D3F300550F42 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EFED34661743517F00F38895 /* Header.h */,
 				EFC013451725D3F300550F42 /* LivermoreTemple-Info.plist */,
 				EFC013461725D3F300550F42 /* InfoPlist.strings */,
 				EFC013491725D3F300550F42 /* main.m */,
@@ -168,6 +385,7 @@
 				EFC013541725D3F300550F42 /* Default-568h@2x.png in Resources */,
 				EFC013571725D3F300550F42 /* MainStoryboard_iPhone.storyboard in Resources */,
 				EFC0135A1725D3F300550F42 /* MainStoryboard_iPad.storyboard in Resources */,
+				EF33D9951745628400891596 /* temple.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,7 +398,28 @@
 			files = (
 				EFC0134A1725D3F300550F42 /* main.m in Sources */,
 				EFC0134E1725D3F300550F42 /* LTAppDelegate.m in Sources */,
-				EFC0135D1725D3F300550F42 /* LTViewController.m in Sources */,
+				EF6CF82D1728631F0015EC70 /* CoreDataTableViewController.m in Sources */,
+				EF2AB2BC17286AAC00840ED0 /* LTCoreViewController.m in Sources */,
+				EFB0D4B51729CAB7003F3FFB /* LivermoreTemple.xcdatamodeld in Sources */,
+				EFB0D50A172EF901003F3FFB /* Temple+Create.m in Sources */,
+				EFB0D519172F95CA003F3FFB /* LTDatabaseDocumentHandler.m in Sources */,
+				EFB0D52817304582003F3FFB /* Event+Create.m in Sources */,
+				EFB0D54317306DC0003F3FFB /* LTCalendarCDTVC.m in Sources */,
+				EFC1F3091732F11900735C8D /* LTEventViewCell.m in Sources */,
+				EFED34111741719E00F38895 /* Temple.m in Sources */,
+				EFED34171741719E00F38895 /* Contact.m in Sources */,
+				EFED34411742990100F38895 /* LTEventCalendarViewController.m in Sources */,
+				EFED34621743505F00F38895 /* ContactResponsibility.m in Sources */,
+				EFED34651743513100F38895 /* DateCalculator.m in Sources */,
+				EFED346F174353E700F38895 /* Pooja.m in Sources */,
+				EFED347E174358CF00F38895 /* Event.m in Sources */,
+				EFED3481174358E400F38895 /* SubEvent.m in Sources */,
+				EF6BFC2F174429BF001C9A49 /* TempleDataController.m in Sources */,
+				EF6BFC321744A4CE001C9A49 /* ThithiAndDay.m in Sources */,
+				EF33D99017455E6000891596 /* EventDataController.m in Sources */,
+				EF33D9931745604800891596 /* SubEvent+create.m in Sources */,
+				EF33D9981751849700891596 /* UILoadingView.m in Sources */,
+				EF33D99E17527E0300891596 /* LTEventScheduleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,8 +552,23 @@
 				EFC013621725D3F300550F42 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EFB0D4B31729CAB7003F3FFB /* LivermoreTemple.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EFB0D4B41729CAB7003F3FFB /* LivermoreTemple.xcdatamodel */,
+			);
+			currentVersion = EFB0D4B41729CAB7003F3FFB /* LivermoreTemple.xcdatamodel */;
+			name = LivermoreTemple.xcdatamodeld;
+			path = "user-interface/model-objects/LivermoreTemple.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EFC013321725D3F300550F42 /* Project object */;
 }

@@ -1,23 +1,25 @@
 //
-//  LTViewController.m
+//  LTCoreViewController.m
 //  LivermoreTemple
 //
-//  Created by Vidya on 4/22/13.
+//  Created by Vidya on 4/24/13.
 //  Copyright (c) 2013 Vidya. All rights reserved.
 //
 
-#import "LTViewController.h"
+#import "LTCoreViewController.h"
 
-@interface LTViewController ()
+@interface LTCoreViewController ()
 
 @end
 
-@implementation LTViewController
+@implementation LTCoreViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    // Setting background Color for all the views
+   
 }
 
 - (void)didReceiveMemoryWarning
