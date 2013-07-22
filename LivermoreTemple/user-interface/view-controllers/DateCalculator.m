@@ -60,7 +60,7 @@
         [formatter setDateFormat:dateFormatStr];
         NSDate *date = [formatter dateFromString:dateStr];
         return date;
-    } else {
+    } else  {
         NSString *tempStr = [dateFormatStr stringByAppendingString:@" "];
         tempStr = [tempStr stringByAppendingString:timeFormatStr];
         [formatter setDateFormat:tempStr];
@@ -68,8 +68,7 @@
         tempStr = [tempStr stringByAppendingString:timeStr];
         NSDate *date = [formatter dateFromString:tempStr];
         return date;
-    }
-    
+    } 
     
 }
 

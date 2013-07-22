@@ -136,21 +136,7 @@
                         [dict setObject:arrayOfNextEventDetails[7] forKey:@"SUBEVENT_ENDDATE"];
                     }
                     [dict setObject:arrayOfNextEventDetails[8] forKey:@"SUBEVENT_ENDTIME"];
-/*
-                    //Initilize Start Date is Empty set it to date based on its recurring value
-                    startDateStr = arrayOfNextEventDetails[5];
-                    startTimeStr = arrayOfNextEventDetails[6];
-                    endDateStr = arrayOfNextEventDetails[7];
-                    endTimeStr = arrayOfNextEventDetails[8];
-                    if ([startDateStr isEqualToString:@""]) {
-                        startDateStr = [self.dateCalc getDateStrFromDate:[eventInfo objectForKey:@"EVENT_STARTDATE"] inDateFormat:@"MM/dd/yyyy"];
-                    }
-                    NSDate *startDate = [self.dateCalc getDateFromDateStr:startDateStr dateFormat:@"MM/dd/yyyy" withTimeStr:startTimeStr timeFormat:@"HH:mm:ss"];
-                    if ([endDateStr isEqualToString:@""]) {
-                        endDateStr = [self.dateCalc getDateStrFromDate:[eventInfo objectForKey:@"EVENT_ENDDATE"] inDateFormat:@"MM/dd/yyyy"];
-                    }
-                    NSDate *endDate = [self.dateCalc getDateFromDateStr:endDateStr dateFormat:@"MM/dd/yyyy" withTimeStr:endTimeStr timeFormat:@"HH:mm:ss"];
-*/
+
                     [tempArrayOfSubEvents addObject:dict];
                     eventIndex++;
                     arrayOfNextEventDetails = [[csvArrayOfEvents objectAtIndex:eventIndex + 1] componentsSeparatedByString:@","];

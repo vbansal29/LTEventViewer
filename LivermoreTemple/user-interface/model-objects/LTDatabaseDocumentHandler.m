@@ -34,9 +34,32 @@ static LTDatabaseDocumentHandler *_sharedInstance;
     self = [super init];
     if (self) {
         
-        // Todo: Check if the sqlite store file exits and if yes use it else copy it from app bundle
+        // Check if the sqlite store file exits in documents directory and if yes use it else copy it from app bundle
+        
+        NSString *fileName = @"ShivaVishnuTempleData.sqlite";
+        
+        // if file doesn't exist in documents directory then copy from app bundle
+        if (![LTDatabaseDocumentHandler getFileExistence:fileName]) {            
+            NSError *error;
+            NSString *file = [[NSBundle mainBundle] pathForResource:fileName ofType:nil];
+            if (file)
+            {
+                if([[NSFileManager defaultManager] copyItemAtPath:file toPath:[LTDatabaseDocumentHandler dataFilePath:fileName] error:&error]){
+                    NSLog(@"File successfully copied");
+                } else { // if file is not in app bundle
+                    [[[UIAlertView alloc]initWithTitle:NSLocalizedString(@"error", nil) message: NSLocalizedString(@"failedcopydb", nil)  delegate:nil cancelButtonTitle:NSLocalizedString(@"ok", nil)  otherButtonTitles:nil] show];
+                    NSLog(@"Error description-%@ \n", [error localizedDescription]);
+                    NSLog(@"Error reason-%@", [error localizedFailureReason]);
+                }
+                file = nil;
+            } else {
+                    NSLog(@"test 44");
+            }
+        } else {
+            NSLog(@"test");
+        }
         NSURL *url = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
-        url = [url URLByAppendingPathComponent:@"ShivaVishnuTempleData.sqlite"];
+        url = [url URLByAppendingPathComponent:fileName];
         self.document =  [[UIManagedDocument alloc] initWithFileURL:url];
         
         //set our document up for automatic migrations
@@ -95,6 +118,33 @@ static LTDatabaseDocumentHandler *_sharedInstance;
 #ifdef DEBUG
     NSLog(@"NSManagedContext did save.");
 #endif
+}
+
++ (BOOL) getFileExistence:(NSString *)filename {
+    
+    BOOL isFileExists = NO;
+    
+    NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask,YES);
+    NSString *documentsDirectory = [documentPaths objectAtIndex:0];
+    NSString *filePath = [documentsDirectory stringByAppendingString:@"/"];
+    filePath = [documentsDirectory stringByAppendingString:filename];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    NSLog(@" filepath = %@", filePath);
+    if ([fileManager fileExistsAtPath:filePath]) {
+        isFileExists = YES;
+    }
+    return isFileExists;
+}
+
++ (NSString *)dataFilePath:(NSString *)filename {
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docDirectory = [paths objectAtIndex:0];
+    docDirectory = [docDirectory stringByAppendingString:@"/"];
+    docDirectory = [docDirectory stringByAppendingString:filename];
+    NSLog(@"doc dir = %@", docDirectory);
+    return docDirectory;
 }
 
 @end

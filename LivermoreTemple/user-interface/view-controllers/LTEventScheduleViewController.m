@@ -27,7 +27,7 @@
 -(NSArray *) sortArrayOfEventsOnDate:(NSArray *)arrayOfEvents {
     
     NSMutableArray *tempArrayOfEvents = [NSMutableArray arrayWithArray:arrayOfEvents];
-    
+   // NSLog(@" array before sort %@", tempArrayOfEvents);
     @try {
         NSInteger counter = [tempArrayOfEvents count];
         NSDate *compareDate;
@@ -36,17 +36,13 @@
         for(int i = 0 ; i < counter; i++) {
             index = i;
             SubEvent *subEvent = [tempArrayOfEvents objectAtIndex:i];
-           NSLog(@"start date & time = %@ & %@",  subEvent.startDate,subEvent.startTime);
             compareDate = [self.dateCalc getDateFromDateStr:subEvent.startDate dateFormat:@"MM/dd/yyyy" withTimeStr:subEvent.startTime timeFormat:@"HH:mm:ss"];
-            
-            NSLog(@" compare date = %@", compareDate);
             NSDate *compareDateSecond;
             
             for(int j = i+1 ; j < counter; j++) {
-                SubEvent *nextSubEvent = [tempArrayOfEvents objectAtIndex:i];
+                SubEvent *nextSubEvent = [tempArrayOfEvents objectAtIndex:j];
                 compareDateSecond=[self.dateCalc getDateFromDateStr:nextSubEvent.startDate dateFormat:@"MM/dd/yyyy" withTimeStr:nextSubEvent.startTime timeFormat:@"HH:mm:ss"];
                 
-               // NSLog(@" first date = %@ second date = %@", compareDate, compareDateSecond);
                 NSComparisonResult result = [compareDate compare:compareDateSecond];
                 if(result == NSOrderedDescending) {
                     compareDate = compareDateSecond;
@@ -76,16 +72,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.dateCalc = [[DateCalculator alloc] init];
+    
     self.eventDetailsLabel.text = self.eventSelected.name;
     self.eventImage.image = [[UIImage alloc] initWithData:self.eventSelected.image];
     NSMutableArray *tempArray = [[NSMutableArray alloc] initWithArray:self.eventSelected.subEvents.allObjects];
     NSArray *sortedArray = [self sortArrayOfEventsOnDate:tempArray];
     self.arrayOfSubEvents = [[NSMutableArray alloc] initWithArray:sortedArray];
-    //create sections of subevents based on different dates
+    //NSLog(@" array of subevents = %@", self.arrayOfSubEvents);
     
+    //create sections of subevents based on different dates
     if (self.arrayOfSubEvents != 0 ) {
-        NSMutableDictionary *tempDictionary = [NSMutableDictionary dictionary];
         
+        NSMutableDictionary *tempDictionary = [NSMutableDictionary dictionary];
         for (SubEvent *subEvent in self.arrayOfSubEvents) {
             NSMutableArray *tempArray = [tempDictionary objectForKey:subEvent.startDate];
             if (tempArray == nil) {
@@ -95,7 +95,7 @@
             [tempArray addObject:subEvent];
         }
         self.arrayOfSectionHeader = [tempDictionary allKeys];
-        NSLog(@"array = %@", self.arrayOfSectionHeader);
+        NSLog(@"array after sorting= %@", self.arrayOfSectionHeader);
         self.dictionaryOfSubEventsBySections = tempDictionary;
     }
 
