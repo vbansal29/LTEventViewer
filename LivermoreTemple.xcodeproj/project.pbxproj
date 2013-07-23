@@ -398,6 +398,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF974F08179E527000FD7EE3 /* persistentStore in Resources */,
 				EFC013481725D3F300550F42 /* InfoPlist.strings in Resources */,
 				EFC013501725D3F300550F42 /* Default.png in Resources */,
 				EFC013521725D3F300550F42 /* Default@2x.png in Resources */,
@@ -405,7 +406,6 @@
 				EFC013571725D3F300550F42 /* MainStoryboard_iPhone.storyboard in Resources */,
 				EFC0135A1725D3F300550F42 /* MainStoryboard_iPad.storyboard in Resources */,
 				EF33D9951745628400891596 /* temple.gif in Resources */,
-				EF974F04179E514400FD7EE3 /* persistentStore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
