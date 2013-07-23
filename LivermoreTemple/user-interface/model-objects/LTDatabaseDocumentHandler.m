@@ -29,6 +29,32 @@ static LTDatabaseDocumentHandler *_sharedInstance;
     return _sharedInstance;
 }
 
++ (BOOL) getFileExistence:(NSString *)filename {
+    
+    BOOL isFileExists = NO;
+    
+    NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask,YES);
+    NSString *documentsDirectory = [documentPaths objectAtIndex:0];
+    NSString *filePath = [documentsDirectory stringByAppendingString:@"/"];
+    filePath = [filePath stringByAppendingString:filename];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if ([fileManager fileExistsAtPath:filePath]) {
+        isFileExists = YES;
+    }
+    return isFileExists;
+}
+
++ (NSString *)dataFilePath:(NSString *)filename {
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docDirectory = [paths objectAtIndex:0];
+    docDirectory = [docDirectory stringByAppendingString:@"/"];
+    docDirectory = [docDirectory stringByAppendingString:filename];
+    NSLog(@"doc dir = %@", docDirectory);
+    return docDirectory;
+}
+
+
 -(id)init {
     
     self = [super init];
@@ -52,17 +78,17 @@ static LTDatabaseDocumentHandler *_sharedInstance;
                     NSLog(@"Error reason-%@", [error localizedFailureReason]);
                 }
                 file = nil;
-            } else {
-                    NSLog(@"test 44");
             }
-        } else {
-            NSLog(@"test");
         }
+        
+        // Create a handle to the file for UIManagedDocument
+        
         NSURL *url = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
         url = [url URLByAppendingPathComponent:fileName];
         self.document =  [[UIManagedDocument alloc] initWithFileURL:url];
         
         //set our document up for automatic migrations
+        
         if (self.document) {
             NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
                                      [NSNumber numberWithBool:YES],
@@ -118,33 +144,6 @@ static LTDatabaseDocumentHandler *_sharedInstance;
 #ifdef DEBUG
     NSLog(@"NSManagedContext did save.");
 #endif
-}
-
-+ (BOOL) getFileExistence:(NSString *)filename {
-    
-    BOOL isFileExists = NO;
-    
-    NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask,YES);
-    NSString *documentsDirectory = [documentPaths objectAtIndex:0];
-    NSString *filePath = [documentsDirectory stringByAppendingString:@"/"];
-    filePath = [documentsDirectory stringByAppendingString:filename];
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    
-    NSLog(@" filepath = %@", filePath);
-    if ([fileManager fileExistsAtPath:filePath]) {
-        isFileExists = YES;
-    }
-    return isFileExists;
-}
-
-+ (NSString *)dataFilePath:(NSString *)filename {
-    
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *docDirectory = [paths objectAtIndex:0];
-    docDirectory = [docDirectory stringByAppendingString:@"/"];
-    docDirectory = [docDirectory stringByAppendingString:filename];
-    NSLog(@"doc dir = %@", docDirectory);
-    return docDirectory;
 }
 
 @end
