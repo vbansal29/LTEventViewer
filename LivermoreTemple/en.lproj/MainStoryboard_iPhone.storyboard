@@ -252,11 +252,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Event Details" id="0Lg-7N-R3s">
-                        <barButtonItem key="rightBarButtonItem" title="Actions" id="aPu-fk-FkY">
-                            <connections>
-                                <segue destination="0gZ-Es-xLA" kind="modal" modalTransitionStyle="flipHorizontal" id="ato-pp-8B8"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="95V-Ei-A4l"/>
                     </navigationItem>
                     <connections>
                         <outlet property="eventDetailsLabel" destination="Qxs-93-Eaj" id="xoK-nG-XzG"/>
@@ -267,38 +263,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iON-In-Men" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1115" y="-302"/>
-        </scene>
-        <!--Table View Controller - Event Actions-->
-        <scene sceneID="a9e-PS-ZUp">
-            <objects>
-                <tableViewController id="Eh9-y1-RAK" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="EPE-q5-LBm">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Hpv-WD-hvL">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="Eh9-y1-RAK" id="esl-Wb-bs6"/>
-                            <outlet property="delegate" destination="Eh9-y1-RAK" id="wEq-vl-kvE"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Event Actions" id="nyP-2s-0uR">
-                        <barButtonItem key="rightBarButtonItem" title="Schedule" id="ujd-y2-kZa"/>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wOZ-LX-PU6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1862" y="-302"/>
         </scene>
         <!--Navigation Controller - Pooja Schedule-->
         <scene sceneID="Ce2-Tb-Az8">
@@ -330,6 +294,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Q9d-io-pVe">
+                        <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="nVS-GZ-V9V" kind="relationship" relationship="rootViewController" id="tnX-rC-GNO"/>
                     </connections>
@@ -357,47 +325,7 @@
             </objects>
             <point key="canvasLocation" x="214" y="712"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="By2-td-Tnw">
-            <objects>
-                <navigationController id="0gZ-Es-xLA" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hKE-tR-tPm">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Eh9-y1-RAK" kind="relationship" relationship="rootViewController" id="eSM-PX-U0s"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UCM-A2-91R" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1479" y="-307"/>
-        </scene>
     </scenes>
-    <classes>
-        <class className="LTCoreViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LTCoreViewController.h"/>
-        </class>
-        <class className="LTEventCalendarViewController" superclassName="LTCoreViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LTEventCalendarViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="eventTableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="LTEventScheduleViewController" superclassName="LTCoreViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LTEventScheduleViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="eventDetailsLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="eventImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="eventScheduleTableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

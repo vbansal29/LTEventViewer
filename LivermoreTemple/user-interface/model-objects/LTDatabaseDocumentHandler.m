@@ -40,17 +40,18 @@ static LTDatabaseDocumentHandler *_sharedInstance;
     NSFileManager *fileManager = [NSFileManager defaultManager];
     if ([fileManager fileExistsAtPath:filePath]) {
         isFileExists = YES;
+        NSLog(@" file is there ");
     }
+    NSLog(@" file path = %@", filePath);
     return isFileExists;
 }
 
 + (NSString *)dataFilePath:(NSString *)filename {
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *docDirectory = [paths objectAtIndex:0];
-    docDirectory = [docDirectory stringByAppendingString:@"/"];
-    docDirectory = [docDirectory stringByAppendingString:filename];
-    NSLog(@"doc dir = %@", docDirectory);
+    NSString *docDirectory = [[paths lastObject] stringByAppendingPathComponent:filename];
+    //docDirectory = [docDirectory stringByAppendingString:@"/"];
+    //docDirectory = [docDirectory stringByAppendingString:filename];
     return docDirectory;
 }
 
@@ -67,10 +68,14 @@ static LTDatabaseDocumentHandler *_sharedInstance;
         // if file doesn't exist in documents directory then copy from app bundle
         if (![LTDatabaseDocumentHandler getFileExistence:fileName]) {            
             NSError *error;
-            NSString *file = [[NSBundle mainBundle] pathForResource:fileName ofType:nil];
+            NSString *file = [[[NSBundle mainBundle] resourcePath ]  stringByAppendingPathComponent:fileName];
+            //NSString *file = [[NSBundle mainBundle] pathForResource:@"ShivaVishnuTempleData" ofType:@"sqlite"];
             if (file)
             {
-                if([[NSFileManager defaultManager] copyItemAtPath:file toPath:[LTDatabaseDocumentHandler dataFilePath:fileName] error:&error]){
+                NSString *copyToPath = [LTDatabaseDocumentHandler dataFilePath:fileName];
+                NSLog(@"file = %@", file);
+                NSLog(@"file copied to %@", copyToPath);
+                if([[NSFileManager defaultManager] copyItemAtPath:file toPath:copyToPath error:&error]){
                     NSLog(@"File successfully copied");
                 } else { // if file is not in app bundle
                     [[[UIAlertView alloc]initWithTitle:NSLocalizedString(@"error", nil) message: NSLocalizedString(@"failedcopydb", nil)  delegate:nil cancelButtonTitle:NSLocalizedString(@"ok", nil)  otherButtonTitles:nil] show];
@@ -78,7 +83,11 @@ static LTDatabaseDocumentHandler *_sharedInstance;
                     NSLog(@"Error reason-%@", [error localizedFailureReason]);
                 }
                 file = nil;
+            } else {
+                NSLog(@" test file not in bundle");
             }
+        } else {
+            NSLog(@"file exists");
         }
         
         // Create a handle to the file for UIManagedDocument

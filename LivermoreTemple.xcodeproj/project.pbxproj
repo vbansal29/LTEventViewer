@@ -16,7 +16,6 @@
 		EF6BFC2F174429BF001C9A49 /* TempleDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6BFC2D174429BF001C9A49 /* TempleDataController.m */; };
 		EF6BFC321744A4CE001C9A49 /* ThithiAndDay.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6BFC311744A4CE001C9A49 /* ThithiAndDay.m */; };
 		EF6CF82D1728631F0015EC70 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6CF82C1728631F0015EC70 /* CoreDataTableViewController.m */; };
-		EF974F04179E514400FD7EE3 /* persistentStore in Resources */ = {isa = PBXBuildFile; fileRef = EF974F03179E514400FD7EE3 /* persistentStore */; };
 		EFB0D4B21729CA2A003F3FFB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFB0D4B11729CA2A003F3FFB /* CoreData.framework */; };
 		EFB0D4B51729CAB7003F3FFB /* LivermoreTemple.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EFB0D4B31729CAB7003F3FFB /* LivermoreTemple.xcdatamodeld */; };
 		EFB0D50A172EF901003F3FFB /* Temple+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB0D509172EF901003F3FFB /* Temple+Create.m */; };
@@ -35,6 +34,7 @@
 		EFC013571725D3F300550F42 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFC013551725D3F300550F42 /* MainStoryboard_iPhone.storyboard */; };
 		EFC0135A1725D3F300550F42 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFC013581725D3F300550F42 /* MainStoryboard_iPad.storyboard */; };
 		EFC1F3091732F11900735C8D /* LTEventViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC1F3081732F11900735C8D /* LTEventViewCell.m */; };
+		EFCFBB0617A046CD00F42432 /* persistentStore in Resources */ = {isa = PBXBuildFile; fileRef = EFCFBB0517A0450C00F42432 /* persistentStore */; };
 		EFED34111741719E00F38895 /* Temple.m in Sources */ = {isa = PBXBuildFile; fileRef = EFED34101741719E00F38895 /* Temple.m */; };
 		EFED34171741719E00F38895 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = EFED34161741719E00F38895 /* Contact.m */; };
 		EFED34411742990100F38895 /* LTEventCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFED34401742990100F38895 /* LTEventCalendarViewController.m */; };
@@ -63,7 +63,6 @@
 		EF6BFC311744A4CE001C9A49 /* ThithiAndDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThithiAndDay.m; sourceTree = "<group>"; };
 		EF6CF82B1728631F0015EC70 /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataTableViewController.h; path = ../CoreDataTableViewController.h; sourceTree = "<group>"; };
 		EF6CF82C1728631F0015EC70 /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataTableViewController.m; path = ../CoreDataTableViewController.m; sourceTree = "<group>"; };
-		EF974F03179E514400FD7EE3 /* persistentStore */ = {isa = PBXFileReference; lastKnownFileType = file; path = persistentStore; sourceTree = "<group>"; };
 		EFB0D4B11729CA2A003F3FFB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		EFB0D4B41729CAB7003F3FFB /* LivermoreTemple.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LivermoreTemple.xcdatamodel; sourceTree = "<group>"; };
 		EFB0D508172EF901003F3FFB /* Temple+Create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Temple+Create.h"; sourceTree = "<group>"; };
@@ -91,6 +90,7 @@
 		EFC013591725D3F300550F42 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		EFC1F3071732F11900735C8D /* LTEventViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTEventViewCell.h; sourceTree = "<group>"; };
 		EFC1F3081732F11900735C8D /* LTEventViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTEventViewCell.m; sourceTree = "<group>"; };
+		EFCFBB0517A0450C00F42432 /* persistentStore */ = {isa = PBXFileReference; lastKnownFileType = file; path = persistentStore; sourceTree = "<group>"; };
 		EFED340F1741719E00F38895 /* Temple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Temple.h; sourceTree = "<group>"; };
 		EFED34101741719E00F38895 /* Temple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Temple.m; sourceTree = "<group>"; };
 		EFED34151741719E00F38895 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
@@ -137,7 +137,7 @@
 		EF2AB2B2172865B000840ED0 /* resources */ = {
 			isa = PBXGroup;
 			children = (
-				EF974F01179E514400FD7EE3 /* ShivaVishnuTempleData.sqlite */,
+				EFCFBB0317A0450C00F42432 /* ShivaVishnuTempleData.sqlite */,
 				EF2AB2B3172865B000840ED0 /* images */,
 			);
 			path = resources;
@@ -257,22 +257,6 @@
 			path = "helper-classes";
 			sourceTree = "<group>";
 		};
-		EF974F01179E514400FD7EE3 /* ShivaVishnuTempleData.sqlite */ = {
-			isa = PBXGroup;
-			children = (
-				EF974F02179E514400FD7EE3 /* StoreContent */,
-			);
-			path = ShivaVishnuTempleData.sqlite;
-			sourceTree = "<group>";
-		};
-		EF974F02179E514400FD7EE3 /* StoreContent */ = {
-			isa = PBXGroup;
-			children = (
-				EF974F03179E514400FD7EE3 /* persistentStore */,
-			);
-			path = StoreContent;
-			sourceTree = "<group>";
-		};
 		EFB0D507172EF857003F3FFB /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -346,6 +330,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		EFCFBB0317A0450C00F42432 /* ShivaVishnuTempleData.sqlite */ = {
+			isa = PBXGroup;
+			children = (
+				EFCFBB0417A0450C00F42432 /* StoreContent */,
+			);
+			name = ShivaVishnuTempleData.sqlite;
+			path = ../../ShivaVishnuTempleData.sqlite;
+			sourceTree = "<group>";
+		};
+		EFCFBB0417A0450C00F42432 /* StoreContent */ = {
+			isa = PBXGroup;
+			children = (
+				EFCFBB0517A0450C00F42432 /* persistentStore */,
+			);
+			path = StoreContent;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -398,7 +399,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF974F08179E527000FD7EE3 /* persistentStore in Resources */,
+				EFCFBB0617A046CD00F42432 /* persistentStore in Resources */,
 				EFC013481725D3F300550F42 /* InfoPlist.strings in Resources */,
 				EFC013501725D3F300550F42 /* Default.png in Resources */,
 				EFC013521725D3F300550F42 /* Default@2x.png in Resources */,
