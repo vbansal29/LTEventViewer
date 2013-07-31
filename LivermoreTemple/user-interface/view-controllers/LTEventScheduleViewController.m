@@ -24,6 +24,14 @@
 
 @implementation LTEventScheduleViewController
 
+-(void)addToReminderList:(id)sender {
+    NSLog(@"added to reminder list");
+}
+
+-(void)shareFacebookTwitterEmail:(id)sender {
+    NSLog(@"shared on Facebook");
+}
+
 -(NSArray *) sortArrayOfEventsOnDate:(NSArray *)arrayOfEvents {
     
     NSMutableArray *tempArrayOfEvents = [NSMutableArray arrayWithArray:arrayOfEvents];
@@ -73,7 +81,19 @@
 {
     [super viewDidLoad];
     
-    self.dateCalc = [[DateCalculator alloc] init];
+    //Code to display both add and save action button on right side
+    
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addToReminderList:)];
+    UIBarButtonItem *shareButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(shareFacebookTwitterEmail:)];
+    
+    NSArray *buttonArray = [NSArray arrayWithObjects:addButton, shareButton, nil];
+    self.navigationItem.rightBarButtonItems = buttonArray;
+    
+    // Change the back button title
+    
+    self.navigationItem.backBarButtonItem.title = @"Back";
+    
+      self.dateCalc = [[DateCalculator alloc] init];
     
     self.eventDetailsLabel.text = self.eventSelected.name;
     self.eventImage.image = [[UIImage alloc] initWithData:self.eventSelected.image];

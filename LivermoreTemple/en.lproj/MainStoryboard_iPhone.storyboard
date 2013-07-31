@@ -251,9 +251,7 @@
                             <constraint firstItem="2du-je-tlz" firstAttribute="top" secondItem="syw-bo-89J" secondAttribute="top" constant="8" id="rhR-RU-Ied"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Event Details" id="0Lg-7N-R3s">
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="95V-Ei-A4l"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Event Details" id="0Lg-7N-R3s"/>
                     <connections>
                         <outlet property="eventDetailsLabel" destination="Qxs-93-Eaj" id="xoK-nG-XzG"/>
                         <outlet property="eventImage" destination="2du-je-tlz" id="dAn-ar-a8h"/>

@@ -15,10 +15,6 @@ typedef void (^OnDocumentReady) (UIManagedDocument *document);
 @property (strong, nonatomic) UIManagedDocument *document;
 
 +(LTDatabaseDocumentHandler *)sharedDatabaseDocumentHandler;
-
-+(BOOL)getFileExistence : (NSString *) filename;
-+(NSString *)dataFilePath:(NSString *)filename;
-
 -(void) performWithDocument:(OnDocumentReady)onDocumentReady;
 
 @end

@@ -18,4 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *eventDetailsLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *eventImage;
 
+-(IBAction)addToReminderList:(id)sender;
+-(IBAction)shareFacebookTwitterEmail:(id)sender;
+
 @end
